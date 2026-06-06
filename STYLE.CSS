@@ -1,0 +1,251 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#8ea4cf6c;
+    color:#0f0f0f;
+}
+
+/* Navigation */
+
+/* Base Reset (Optional, but ensures perfect alignment) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 1. The Glossy Container */
+nav {
+  position: fixed;       /* Keeps navbar locked at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;         /* Stays above all page content */
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;    /* Clean spacing on the sides */
+
+  /* Glassmorphism Effect */
+  background: rgba(2, 2, 2, 0.08); 
+  backdrop-filter: blur(12px);          /* Blurs content behind the bar */
+  -webkit-backdrop-filter: blur(12px);  /* Crucial Safari Support */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Edge light reflection */
+  box-shadow: 0 4px 30px rgba(36, 34, 34, 0.05);          /* Subtle depth */
+}
+
+/* 2. Logo Styling */
+nav .logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #a90de1;        /* White text for dark/colorful themes */
+  letter-spacing: 0.5px;
+}
+
+/* 3. Navigation Links List */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;             /* Modern gap spacing instead of margins */
+  align-items: center;
+}
+
+/* 4. Anchor Link Styling */
+nav ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75); /* Soft white */
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+/* 5. Micro-Glossy Hover Pill */
+nav ul li a:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15); /* Brighter glass patch on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:#c21eeb;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#2563eb;
+}
+
+/* Hero */
+
+.hero{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero-content span{
+    color:#c21eeb;
+}
+
+.hero-content p{
+    max-width:650px;
+    margin:auto;
+    line-height:1.8;
+    color:#555;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 28px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#1e40af;
+}
+
+/* Sections */
+
+.section{
+    padding:80px 10%;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#2563eb;
+    font-size:2rem;
+}
+
+.section p{
+    text-align:center;
+    line-height:1.8;
+}
+
+/* Education */
+
+.card{
+    color:#f3f2f2;
+    background:rgb(71, 71, 67);
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+/* Projects */
+
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+}
+
+.project-card{
+    color:#f3f2f2;
+    background:rgb(77, 77, 74);
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(227, 221, 221, 0.08);
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+}
+
+.project-card h3{
+    margin-bottom:15px;
+}
+
+/* Contact */
+
+.contact-box{
+    color:#f3f2f2;
+    background:rgb(55, 55, 53);
+    padding:30px;
+    border-radius:12px;
+    max-width:600px;
+    margin:auto;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.contact-box p{
+    margin:12px 0;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:white;
+    margin-top:50px;
+    box-shadow:0 -2px 10px rgba(0,0,0,0.05);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        margin-top:15px;
+    }
+
+    .hero-content h1{
+        font-size:2.2rem;
+    }
+
+    .section{
+        padding:60px 5%;
+    }
+}
